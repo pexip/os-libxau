@@ -1,3 +1,26 @@
+libxau (1:1.0.8-1pexip1) pexip; urgency=low
+
+  * Migrate to Jessie
+
+ -- John-Mark Bell <jmb@pexip.com>  Mon, 20 Mar 2017 23:42:31 +0000
+
+libxau (1:1.0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump debhelper compat level to 7.
+  * Use dpkg-buildflags and disable silent rules.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 14 Jun 2013 20:23:24 +0200
+
+libxau (1:1.0.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Don't require (fake)root for debian/rules clean.
+  * Bump xutils-dev build-dep to 1:7.5+4 for newer macros.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 09 Apr 2012 18:50:40 +0200
+
 libxau (1:1.0.6-4pexip1) pexip; urgency=low
 
   * Prepare Pexip packaging
