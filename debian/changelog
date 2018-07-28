@@ -1,3 +1,9 @@
+libxau (1:1.0.8-1pexip2) pexip; urgency=low
+
+  * Migrate to Stretch
+
+ -- John-Mark Bell <jmb@pexip.com>  Sun, 29 Jul 2018 00:34:28 +0100
+
 libxau (1:1.0.8-1pexip1) pexip; urgency=low
 
   * Migrate to Jessie
