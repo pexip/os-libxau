@@ -1,3 +1,18 @@
+libxau (1:1.0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control, rules: Migrate to dh, and debhelper-compat, bump to 13.
+  * Remove xsfbs.
+  * control: Bump policy to 4.5.1.
+  * Remove Cyril from Uploaders.
+  * control: Update Vcs and upstream urls.
+  * control: Migrate to x11proto-dev.
+  * watch: Update upstream git url.
+  * Update README.source for salsa.
+  * Let uscan verify tarball signatures.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Jan 2021 00:25:08 +0200
+
 libxau (1:1.0.8-1pexip3) pexip; urgency=medium
 
   * Rebuild in buster environment
