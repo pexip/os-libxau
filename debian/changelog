@@ -1,3 +1,9 @@
+libxau (1:1.0.9-1pexip2) pexip-bullseye; urgency=medium
+
+  * Main bullseye build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Fri, 24 Jun 2022 13:56:06 +0100
+
 libxau (1:1.0.9-1pexip1) pexip; urgency=medium
 
   * Initial bullseye build
