@@ -7,9 +7,9 @@ Build-Depends:
  pkg-config,
  x11proto-dev,
  quilt,
- xutils-dev (>= 1:7.5+4),
-Standards-Version: 4.5.1
-Vcs-Git: https://salsa.debian.org/xorg-team/lib/libxau
+ xutils-dev,
+Standards-Version: 4.6.2
+Vcs-Git: https://salsa.debian.org/xorg-team/lib/libxau.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/libxau
 
 Package: libxau6
@@ -32,11 +32,12 @@ Description: X11 authorisation library
  https://gitlab.freedesktop.org/xorg/lib/libxau
 
 Package: libxau6-udeb
-XC-Package-Type: udeb
+Package-Type: udeb
 Section: debian-installer
 Architecture: any
 Depends:
  ${shlibs:Depends},
+ ${misc:Depends},
 Description: X11 authorisation library
  This is a udeb, or a microdeb, for the debian-installer.
 
