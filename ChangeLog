@@ -1,3 +1,238 @@
+commit 14fdf25db9f21c8f3ad37f0d32a5b8e726efdc0d
+Author: Matt Turner <mattst88@gmail.com>
+Date:   Thu Dec 8 10:36:36 2022 -0500
+
+    libXau 1.0.11
+    
+    Signed-off-by: Matt Turner <mattst88@gmail.com>
+
+commit 10f76cc702e0877743e21241b897ab93010367a2
+Author: Matt Turner <mattst88@gmail.com>
+Date:   Tue Nov 29 12:02:21 2022 -0500
+
+    configure: Use AC_SYS_LARGEFILE to enable large file support
+    
+    Signed-off-by: Matt Turner <mattst88@gmail.com>
+
+commit 4fbefa02d6c842401ff79065d364edd7087a12a6
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Fri Aug 26 16:01:41 2022 -0700
+
+    libXau 1.0.10
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 83f33926d43f6ae4cf9734e3aedbef23fb0d6b74
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sun Jul 17 10:06:05 2022 -0700
+
+    XauReadAuth: move failure handling code to a common code block
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 3db78d0fa60e07a4ffda61a19849ad30623f70cf
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sat Jul 9 11:00:50 2022 -0700
+
+    Remove unnnecessary casts from malloc() and free() calls
+    
+    These are not needed in C89 and later.
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 7f43a321e59b998e731b36039b744138a2d5b776
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sat Jul 9 10:54:58 2022 -0700
+
+    Autest.c: Fix -Wdiscarded-qualifiers warnings
+    
+    Autest.c: In function ‘main’:
+    Autest.c:38:21: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       38 |     char    *name = "XAU-TEST-1";
+          |                     ^~~~~~~~~~~~
+    Autest.c:39:21: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       39 |     char    *data = "Do not begin the test until instructed to do so.";
+          |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Autest.c:57:23: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       57 |     test_data.address = "";
+          |                       ^
+    Autest.c:59:22: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+       59 |     test_data.number = "";
+          |                      ^
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit b98078c15874c12dfd4e01594ef9277897ade1df
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sat Jul 9 10:50:11 2022 -0700
+
+    Fix spelling/wording issues
+    
+    Found by using:
+        codespell --builtin clear,rare,usage,informal,names
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit d824fa5517cf445dc1e204f05ee2098c254f2bdb
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sat Jul 9 10:48:33 2022 -0700
+
+    Build xz tarballs instead of bzip2
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 8928883477ff32cbbb97ee0e871324812e3b5c96
+Author: Tobias Stoeckmann <tobias@stoeckmann.org>
+Date:   Sun Jul 3 11:52:44 2022 +0200
+
+    Use explicit_bzero if available
+    
+    Optimizing compilers may remove the bzero call because it is followed
+    by free. The function explicit_bzero avoids this optimization. Use it
+    if it is available.
+    
+    Signed-off-by: Tobias Stoeckmann <tobias@stoeckmann.org>
+
+commit 19b13bf20de5b15ab87fb4019ec910ef3216129f
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sat Jul 9 10:20:45 2022 -0700
+
+    gitlab CI: add a basic build test
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit d9443b2c57b512cfb250b35707378654d86c7dea
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sun Feb 10 14:42:30 2019 -0800
+
+    libXau 1.0.9
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 6f0b6fcf699592d9ed284356571a2f4681726ac5
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Fri Dec 7 19:38:53 2018 -0800
+
+    Update configure.ac bug URL for gitlab migration
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 7ba7085b4f01f3cd72008712a5333ea3f0edfd88
+Author: walter harms <wharms@bfs.de>
+Date:   Sat Oct 28 19:14:22 2017 +0200
+
+    AuRead.c: remove redundant null check on calling free()
+    
+    this removes simply unneeded code from XauReadAuth
+    
+    Signed-off-by: Walter Harms <wharms@bfs.de>
+    Reviewed-by: Daniel Martin <consume.noise@gmail.com>
+    Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
+
+commit cf6cc845ba12dbfa7d29a4eab810888838a9749b
+Author: walter harms <wharms@bfs.de>
+Date:   Sat Oct 28 19:14:26 2017 +0200
+
+    Au FileName.c: remove redundant null check on calling free()
+    
+    remove redundant null check on calling free()
+    Signed-off-by: Walter Harms <wharms@bfs.de>
+    Reviewed-by: Daniel Martin <consume.noise@gmail.com>
+    Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
+
+commit fdbb21274a4e8af419b2581e05242f5058471f72
+Author: walter harms <wharms@bfs.de>
+Date:   Sat Oct 28 19:14:13 2017 +0200
+
+    AuDispose.c:remove redundant null check on calling free()
+    
+    redundant null check on auth->address calling free()
+    redundant null check on auth->number calling free()
+    redundant null check on auth->name calling free()
+    
+    Signed-off-by: Walter Harms <wharms@bfs.de>
+    Reviewed-by: Daniel Martin <consume.noise@gmail.com>
+    Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
+
+commit 987fee49dc1750082cfe6e24833379233777a13b
+Author: Tobias Stoeckmann <tobias@stoeckmann.org>
+Date:   Thu Oct 19 22:18:18 2017 +0200
+
+    Avoid out of boundary read access
+    
+    If the environment variable HOME is empty, XauFileName triggers an
+    out of boundary read access (name[1]). If HOME consists of a single
+    character relative path, the output becomes unexpected, because
+    "HOME=a" leads to "a.Xauthority" instead of "a/.Xauthority". Granted,
+    a relative HOME path leads to trouble in general, the code should
+    properly return "a/.Xauthority" nonetheless.
+    
+    Signed-off-by: Tobias Stoeckmann <tobias@stoeckmann.org>
+    Reviewed-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 42e152c6f2d1bd839e77c5e97f3a509d890c3237
+Author: Mihail Konev <k.mvc@ya.ru>
+Date:   Thu Jan 26 13:52:49 2017 +1000
+
+    autogen: add default patch prefix
+    
+    Signed-off-by: Mihail Konev <k.mvc@ya.ru>
+
+commit fca98447c95ae0284b4f1b0c381011f8ccaf1ff0
+Author: Emil Velikov <emil.l.velikov@gmail.com>
+Date:   Mon Mar 9 12:00:52 2015 +0000
+
+    autogen.sh: use quoted string variables
+    
+    Place quotes around the $srcdir, $ORIGDIR and $0 variables to prevent
+    fall-outs, when they contain space.
+    
+    Signed-off-by: Emil Velikov <emil.l.velikov@gmail.com>
+    Reviewed-by: Peter Hutterer <peter.hutterer@who-t.net>
+    Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+
+commit 33f792eb48687793bbb92e62d7462828c7468b55
+Author: Peter Hutterer <peter.hutterer@who-t.net>
+Date:   Tue Jan 24 10:32:07 2017 +1000
+
+    autogen.sh: use exec instead of waiting for configure to finish
+    
+    Syncs the invocation of configure with the one from the server.
+    
+    Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+    Reviewed-by: Emil Velikov <emil.velikov@collabora.com>
+
+commit 1e4635be11154dd8262f37b379511bd627defa2a
+Author: Jeremy Huddleston Sequoia <jeremyhu@apple.com>
+Date:   Thu Jan 2 01:07:41 2014 -0800
+
+    Silence a benign static analysis warning with an assert of allocation size
+    
+    AuFileName.c:72:8: warning: Call to 'malloc' has an allocation size of 0 bytes
+            buf = malloc (size);
+                  ^~~~~~~~~~~~~
+    
+    Signed-off-by: Jeremy Huddleston Sequoia <jeremyhu@apple.com>
+
+commit 304a11be4727c5a7feeb2501e8e001466f8ce84e
+Author: Alan Coopersmith <alan.coopersmith@oracle.com>
+Date:   Sun Sep 29 09:23:45 2013 -0700
+
+    XauFileName: always go through buf allocation if buf is NULL
+    
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
+commit 67beb3d0bc41c3416902c858f595b35306f76704
+Author: Fuminobu TAKEYAMA <ftake@geeko.jp>
+Date:   Sun Sep 29 09:21:05 2013 -0700
+
+    XauFileName: reset bsize when malloc failed
+    
+    https://bugs.freedesktop.org/show_bug.cgi?id=69929
+    
+    Reviewed-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+    Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+
 commit 899790011304c4029e15abf410e49ce7cec17e0a
 Author: Alan Coopersmith <alan.coopersmith@oracle.com>
 Date:   Fri May 24 15:04:00 2013 -0700

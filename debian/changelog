@@ -1,3 +1,20 @@
+libxau (1:1.0.11-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on xutils-dev.
+  * Add missing ${misc:Depends} to Depends for libxau6-udeb.
+  * Replace XC-Package-Type with Package-Type.
+  * Use canonical URL in Vcs-Git.
+  * Update standards version to 4.6.1, no changes needed.
+  * Update standards version to 4.6.2, no changes needed.
+
+  [ Julien Cristau ]
+  * Add Matt Turner's pgp key to d/upstream/signing-key.asc.
+  * New upstream release.
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 01 Nov 2024 16:15:26 +0100
+
 libxau (1:1.0.9-1+pexip24u6) pexip-bookworm; urgency=medium
 
   * New versioning scheme
